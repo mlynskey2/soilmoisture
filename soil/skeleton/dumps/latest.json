@@ -61,6 +61,19 @@
   }
 },
 {
+  "model": "address.address",
+  "pk": 3,
+  "fields": {
+    "street_number": "12",
+    "route": "Tory St",
+    "locality": 1,
+    "raw": "12 Tory St, RD3",
+    "formatted": "",
+    "latitude": null,
+    "longitude": null
+  }
+},
+{
   "model": "auth.group",
   "pk": 1,
   "fields": {
@@ -73,15 +86,15 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$150000$WrRjg3RiPbm2$pw4Dw613H5hzaBnklxCWIRFwZbYuoIfMmu3nYhQkUbg=",
-    "last_login": "2019-09-12T04:19:02.643Z",
+    "last_login": "2019-11-18T03:58:07Z",
     "is_superuser": true,
     "username": "admin",
-    "first_name": "",
-    "last_name": "",
+    "first_name": "Mr",
+    "last_name": "Administrator",
     "email": "mabznz@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2019-06-24T22:47:46.176Z",
+    "date_joined": "2019-06-24T22:47:46Z",
     "groups": [],
     "user_permissions": []
   }
@@ -145,6 +158,32 @@
   }
 },
 {
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$RLSgi7j5PblU$8CEiLLwcMHYIEmgdfRfcgdvdBnBRIuc4kBC+co3YxNs=",
+    "last_login": "2019-11-18T22:19:42.258Z",
+    "is_superuser": true,
+    "username": "hamiltonb",
+    "first_name": "Brendan",
+    "last_name": "Hamilton",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-11-18T22:18:58Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "beffu2xip22qh1pea9vox3wlhl0vdt7w",
+  "fields": {
+    "session_data": "MDM0YTk5NzliZDExZjA1NjE0YzRkMGYxYTAxMTYxYTBjZjA0MjFjYTp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3OTNkZDI3M2NhZTA4NzY3NjhhNjVhYTlmZWRhMDVkMzA3YTg5MzdiIn0=",
+    "expire_date": "2019-12-02T22:19:42.267Z"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "gwcdjw8vwwdqhwxotwol2rbrx1373xrx",
   "fields": {
@@ -161,15 +200,267 @@
   }
 },
 {
-  "model": "skeleton.season",
+  "model": "skeleton.document",
   "pk": 1,
   "fields": {
-    "name": "2018",
-    "period_from": "2018-09-01",
-    "period_to": "2019-08-31",
-    "comment": "2018 NZ Growing Season",
-    "created_date": "2019-07-04T21:11:08Z",
-    "created_by": 1
+    "description": "",
+    "document": "documents/neutron_probe_test_upload_1_site_xQBZuDq.csv"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 2,
+  "fields": {
+    "description": "",
+    "document": "documents/neutron_probe_test_upload_1_site_gjdirFX.csv"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 3,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000067_XdxqaWh.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 4,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_InObe3p.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 5,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_r2wfPcI.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 6,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_jPWjFwh.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 7,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_L2jLaFD.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 8,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_zjZlzFC.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 9,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_dSGU7vU.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 10,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_sRuUUBR.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 11,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_yZbLNn2.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 12,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_jA4D7oO.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 13,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_X8WHerm.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 14,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_LYPT67W.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 15,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_dPJsm0c.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 16,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_V3mYPgH.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 17,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000068.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 18,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_AfZ88W6.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 19,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000068_WRkUzs2.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 20,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_Hjm0P5R.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 21,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_LgborkC.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 22,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_8jnFqRp.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 23,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_q2b5B5O.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 24,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_B5PeT85.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 25,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_zdKxC7R.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 26,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_VK4vs1E.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 27,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_q4BVMko.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 28,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000068_z4tFzIT.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 29,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_vnHXHOp.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 30,
+  "fields": {
+    "description": "",
+    "document": "documents/neutron_probe_test_upload_1_site_pMUQYPq.csv"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 31,
+  "fields": {
+    "description": "",
+    "document": "documents/diviner_probe_test_21May2019_Pro22_hbG7nFo.csv"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 32,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_Hvo4REp.TXT"
+  }
+},
+{
+  "model": "skeleton.document",
+  "pk": 33,
+  "fields": {
+    "description": "",
+    "document": "documents/S0000071_ysX7egX.TXT"
   }
 },
 {
@@ -249,23 +540,40 @@
   }
 },
 {
+  "model": "skeleton.farm",
+  "pk": 3,
+  "fields": {
+    "name": "Evendon",
+    "owner": "Gary Wellwood",
+    "comment": null,
+    "address": 3,
+    "report": 1,
+    "landline": null,
+    "mobile": null,
+    "email": null,
+    "folder": null,
+    "created_date": "2019-11-18T22:22:26Z",
+    "created_by": 1
+  }
+},
+{
   "model": "skeleton.crop",
   "pk": 1,
   "fields": {
     "name": "Grapes Pinot Noir",
     "report": 1,
     "dwu_formaula": null,
-    "season_start": "2018-09-01",
-    "critical_label1": "Bud Break",
-    "critical_label2": "Flowering",
-    "critical_label3": "Veraison Estimate",
-    "critical_label4": "Harvest estimate",
+    "season_start": null,
+    "critical_label1": null,
+    "critical_label2": null,
+    "critical_label3": null,
+    "critical_label4": null,
     "critical_label5": null,
     "critical_label6": null,
-    "critical_date1": "2018-09-24",
-    "critical_date2": "2018-12-04",
-    "critical_date3": "2019-02-02",
-    "critical_date4": "2019-03-27",
+    "critical_date1": null,
+    "critical_date2": null,
+    "critical_date3": null,
+    "critical_date4": null,
     "critical_date5": null,
     "critical_date6": null,
     "season_end": null,
@@ -295,14 +603,14 @@
     "name": "Apples",
     "report": 1,
     "dwu_formaula": null,
-    "season_start": "2016-10-10",
-    "critical_label1": "Bud Break",
+    "season_start": null,
+    "critical_label1": null,
     "critical_label2": null,
     "critical_label3": null,
     "critical_label4": null,
     "critical_label5": null,
     "critical_label6": null,
-    "critical_date1": "2016-09-10",
+    "critical_date1": null,
     "critical_date2": null,
     "critical_date3": null,
     "critical_date4": null,
@@ -414,19 +722,12 @@
   "fields": {
     "site_number": "ABC123",
     "farm": 1,
+    "technician": 3,
     "selected": null,
     "name": "Pinot Noir Springstone",
     "variety": "Grapes",
     "crop": 1,
     "report": null,
-    "season_start": "2018-09-30",
-    "bud_break": "2018-09-14",
-    "cd2": "2018-11-28",
-    "cd3": "2019-02-02",
-    "cd4": "2019-03-20",
-    "cd5": null,
-    "cd6": null,
-    "season_end": "2019-04-29",
     "irrigation_method": 1,
     "irrigation_area": 10.0,
     "irrigation_time": 3.0,
@@ -450,8 +751,6 @@
     "depth8": 120,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "depth_he1": 1,
     "depth_he2": 2,
     "depth_he3": 3,
@@ -462,8 +761,6 @@
     "depth_he8": 8,
     "depth_he9": null,
     "depth_he10": null,
-    "depth_he11": null,
-    "depth_he12": null,
     "upper_limit": null,
     "lower_limit": null,
     "emitter_rate": null,
@@ -473,6 +770,7 @@
     "wetted_width": null,
     "delivery_time": null,
     "area": null,
+    "comment": null,
     "created_date": "2019-06-24T23:53:03Z",
     "created_by": 1
   }
@@ -483,19 +781,12 @@
   "fields": {
     "site_number": "3514",
     "farm": 2,
+    "technician": 3,
     "selected": null,
     "name": "Sandpit Pink Lady 22 Notchwood side (no weed mat)",
     "variety": "Pink Lady",
     "crop": 2,
     "report": null,
-    "season_start": "2017-10-14",
-    "bud_break": "2017-10-24",
-    "cd2": "2018-04-10",
-    "cd3": null,
-    "cd4": null,
-    "cd5": null,
-    "cd6": null,
-    "season_end": "2018-05-09",
     "irrigation_method": 1,
     "irrigation_area": 10.0,
     "irrigation_time": 1.0,
@@ -519,8 +810,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "depth_he1": 1,
     "depth_he2": 2,
     "depth_he3": 3,
@@ -531,8 +820,6 @@
     "depth_he8": null,
     "depth_he9": null,
     "depth_he10": null,
-    "depth_he11": null,
-    "depth_he12": null,
     "upper_limit": 2,
     "lower_limit": 3,
     "emitter_rate": 30.0,
@@ -542,6 +829,7 @@
     "wetted_width": 350,
     "delivery_time": 60,
     "area": 10.0,
+    "comment": null,
     "created_date": "2019-06-27T21:46:01Z",
     "created_by": 1
   }
@@ -552,19 +840,12 @@
   "fields": {
     "site_number": "3506",
     "farm": 2,
+    "technician": 4,
     "selected": null,
     "name": "Smiley Pink Kiss",
     "variety": "Pink Lady",
     "crop": 2,
     "report": null,
-    "season_start": "2017-10-14",
-    "bud_break": "2017-10-24",
-    "cd2": "2018-04-17",
-    "cd3": null,
-    "cd4": null,
-    "cd5": null,
-    "cd6": null,
-    "season_end": "2018-05-09",
     "irrigation_method": 1,
     "irrigation_area": 10.0,
     "irrigation_time": 1.0,
@@ -588,8 +869,6 @@
     "depth8": 120,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "depth_he1": 1,
     "depth_he2": 2,
     "depth_he3": 3,
@@ -600,8 +879,6 @@
     "depth_he8": 8,
     "depth_he9": null,
     "depth_he10": null,
-    "depth_he11": null,
-    "depth_he12": null,
     "upper_limit": 2,
     "lower_limit": 3,
     "emitter_rate": 55.0,
@@ -611,7 +888,335 @@
     "wetted_width": 500,
     "delivery_time": 60,
     "area": 10.0,
+    "comment": null,
     "created_date": "2019-06-30T21:53:59Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.site",
+  "pk": 4,
+  "fields": {
+    "site_number": "68",
+    "farm": 3,
+    "technician": 3,
+    "selected": null,
+    "name": "River 4 Pacific Rose",
+    "variety": "Pacific Rose",
+    "crop": 2,
+    "report": null,
+    "irrigation_method": 1,
+    "irrigation_area": 10.0,
+    "irrigation_time": 3.0,
+    "irrigation_delivered_volume": 1200.0,
+    "irrigation_position": 10.0,
+    "irrigation_yield": null,
+    "irrigation_allocation_volume": 0.0,
+    "rz1_top": 0,
+    "rz1_bottom": 100,
+    "rz2_top": 0,
+    "rz2_bottom": 70,
+    "rz3_top": 0,
+    "rz3_bottom": 45,
+    "depth1": 10,
+    "depth2": 20,
+    "depth3": 30,
+    "depth4": 40,
+    "depth5": 50,
+    "depth6": 60,
+    "depth7": 70,
+    "depth8": 80,
+    "depth9": 90,
+    "depth10": 100,
+    "depth_he1": 1,
+    "depth_he2": 2,
+    "depth_he3": 3,
+    "depth_he4": 4,
+    "depth_he5": 5,
+    "depth_he6": 6,
+    "depth_he7": 7,
+    "depth_he8": 8,
+    "depth_he9": 9,
+    "depth_he10": 10,
+    "upper_limit": 3,
+    "lower_limit": 3,
+    "emitter_rate": 50.0,
+    "row_spacing": 500,
+    "emitter_spacing": 250,
+    "plant_spacing": 250,
+    "wetted_width": 500,
+    "delivery_time": null,
+    "area": null,
+    "comment": null,
+    "created_date": "2019-11-18T22:24:21Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.site",
+  "pk": 5,
+  "fields": {
+    "site_number": "71",
+    "farm": 3,
+    "technician": 3,
+    "selected": null,
+    "name": "Deer Block 3 Pacific Queen",
+    "variety": "Pacific Queen",
+    "crop": 2,
+    "report": null,
+    "irrigation_method": 1,
+    "irrigation_area": 10.0,
+    "irrigation_time": 3.0,
+    "irrigation_delivered_volume": 600.0,
+    "irrigation_position": 10.0,
+    "irrigation_yield": null,
+    "irrigation_allocation_volume": 0.0,
+    "rz1_top": 0,
+    "rz1_bottom": 100,
+    "rz2_top": 0,
+    "rz2_bottom": 30,
+    "rz3_top": 0,
+    "rz3_bottom": 75,
+    "depth1": 10,
+    "depth2": 20,
+    "depth3": 30,
+    "depth4": 40,
+    "depth5": 50,
+    "depth6": 60,
+    "depth7": 70,
+    "depth8": 80,
+    "depth9": 90,
+    "depth10": 100,
+    "depth_he1": 1,
+    "depth_he2": 2,
+    "depth_he3": 3,
+    "depth_he4": 4,
+    "depth_he5": 5,
+    "depth_he6": 6,
+    "depth_he7": 7,
+    "depth_he8": 8,
+    "depth_he9": 9,
+    "depth_he10": 10,
+    "upper_limit": 3,
+    "lower_limit": 3,
+    "emitter_rate": 47.0,
+    "row_spacing": 500,
+    "emitter_spacing": 250,
+    "plant_spacing": 250,
+    "wetted_width": 500,
+    "delivery_time": null,
+    "area": null,
+    "comment": null,
+    "created_date": "2019-11-18T22:27:09Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.season",
+  "pk": 1,
+  "fields": {
+    "name": "2018",
+    "current_flag": true,
+    "created_date": "2019-07-04T21:11:08Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.season",
+  "pk": 2,
+  "fields": {
+    "name": "2019",
+    "current_flag": false,
+    "created_date": "2019-11-18T03:58:13Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldatetype",
+  "pk": 1,
+  "fields": {
+    "name": "Start",
+    "season_flag": true,
+    "comment": null,
+    "created_date": "2019-11-18T03:59:26Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldatetype",
+  "pk": 2,
+  "fields": {
+    "name": "End",
+    "season_flag": true,
+    "comment": null,
+    "created_date": "2019-11-18T03:59:41Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldatetype",
+  "pk": 3,
+  "fields": {
+    "name": "Bud Break",
+    "season_flag": false,
+    "comment": null,
+    "created_date": "2019-11-18T03:59:47Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 1,
+  "fields": {
+    "site": 1,
+    "season": 1,
+    "type": 1,
+    "date": "2018-10-15",
+    "comment": null,
+    "created_date": "2018-10-15T04:00:04Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 2,
+  "fields": {
+    "site": 2,
+    "season": 1,
+    "type": 1,
+    "date": "2018-10-15",
+    "comment": null,
+    "created_date": "2019-11-18T04:01:32Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 3,
+  "fields": {
+    "site": 3,
+    "season": 1,
+    "type": 1,
+    "date": "2018-10-15",
+    "comment": null,
+    "created_date": "2019-11-18T04:01:41Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 4,
+  "fields": {
+    "site": 1,
+    "season": 1,
+    "type": 2,
+    "date": "2019-05-25",
+    "comment": null,
+    "created_date": "2019-11-18T04:01:55Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 5,
+  "fields": {
+    "site": 2,
+    "season": 1,
+    "type": 2,
+    "date": "2019-05-25",
+    "comment": null,
+    "created_date": "2019-11-18T04:02:16Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 6,
+  "fields": {
+    "site": 3,
+    "season": 1,
+    "type": 2,
+    "date": "2019-05-25",
+    "comment": null,
+    "created_date": "2019-11-18T04:02:29Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 7,
+  "fields": {
+    "site": 1,
+    "season": 2,
+    "type": 1,
+    "date": "2019-07-18",
+    "comment": null,
+    "created_date": "2019-11-18T04:02:45Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 8,
+  "fields": {
+    "site": 1,
+    "season": 2,
+    "type": 2,
+    "date": "2020-08-18",
+    "comment": null,
+    "created_date": "2019-11-18T04:03:20Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 9,
+  "fields": {
+    "site": 5,
+    "season": 1,
+    "type": 1,
+    "date": "2018-10-14",
+    "comment": null,
+    "created_date": "2019-11-18T22:38:45Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 10,
+  "fields": {
+    "site": 5,
+    "season": 1,
+    "type": 2,
+    "date": "2019-04-29",
+    "comment": null,
+    "created_date": "2019-11-18T22:39:20Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 11,
+  "fields": {
+    "site": 4,
+    "season": 1,
+    "type": 1,
+    "date": "2018-10-20",
+    "comment": null,
+    "created_date": "2019-11-18T22:39:53Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.criticaldate",
+  "pk": 12,
+  "fields": {
+    "site": 4,
+    "season": 1,
+    "type": 2,
+    "date": "2019-04-23",
+    "comment": null,
+    "created_date": "2019-11-18T22:40:41Z",
     "created_by": 1
   }
 },
@@ -1116,7 +1721,7 @@
   "fields": {
     "site": 1,
     "type": 2,
-    "date": "2018-09-28",
+    "date": "2018-11-28",
     "depth1": 28.02894974,
     "depth2": 22.1584053,
     "depth3": 20.0728569,
@@ -1127,8 +1732,6 @@
     "depth8": 15.02739906,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 3,
     "rz1": null,
     "rz2": null,
@@ -1145,7 +1748,7 @@
     "efflrr1": -13.6,
     "efflrr2": 0.0,
     "effective_irrigation": 0.0,
-    "comment": null,
+    "comment": "",
     "created_date": "2019-06-25T00:05:01Z",
     "created_by": 1
   }
@@ -1167,8 +1770,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 3,
     "rz1": 159.401825,
     "rz2": 159.401825,
@@ -1207,8 +1808,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": null,
     "rz1": 116.8999939,
     "rz2": 116.8999939,
@@ -1247,8 +1846,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 118.1945801,
     "rz2": 118.1945801,
@@ -1287,8 +1884,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 115.611824,
     "rz2": 115.611824,
@@ -1327,8 +1922,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 144.4781799,
     "rz2": 144.4781799,
@@ -1367,8 +1960,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 174.7702789,
     "rz2": 174.7702789,
@@ -1407,8 +1998,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 165.6452026,
     "rz2": 165.6452026,
@@ -1447,8 +2036,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 172.9837646,
     "rz2": 172.9837646,
@@ -1487,8 +2074,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 154.123291,
     "rz2": 154.123291,
@@ -1527,8 +2112,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 135.1819153,
     "rz2": 135.1819153,
@@ -1567,8 +2150,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 136.846283,
     "rz2": 136.846283,
@@ -1607,8 +2188,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 132.7137909,
     "rz2": 132.7137909,
@@ -1647,8 +2226,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 113.8207169,
     "rz2": 113.8207169,
@@ -1687,8 +2264,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 169.5508423,
     "rz2": 169.5508423,
@@ -1727,8 +2302,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 144.724823,
     "rz2": 144.724823,
@@ -1767,8 +2340,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 131.2473297,
     "rz2": 131.2473297,
@@ -1807,8 +2378,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 128.1873932,
     "rz2": 128.1873932,
@@ -1847,8 +2416,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 157.9638519,
     "rz2": 157.9638519,
@@ -1887,8 +2454,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 153.1809387,
     "rz2": 153.1809387,
@@ -1927,8 +2492,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 138.5381012,
     "rz2": 138.5381012,
@@ -1967,8 +2530,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 111.447937,
     "rz2": 111.447937,
@@ -2007,8 +2568,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 101.5824127,
     "rz2": 101.5824127,
@@ -2047,8 +2606,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 151.1632233,
     "rz2": 151.1632233,
@@ -2087,8 +2644,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 105.1465073,
     "rz2": 105.1465073,
@@ -2127,8 +2682,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 98.51747894,
     "rz2": 98.51747894,
@@ -2167,8 +2720,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 93.9577179,
     "rz2": 93.9577179,
@@ -2207,8 +2758,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 92.6204834,
     "rz2": 92.6204834,
@@ -2247,8 +2796,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 93.93292236,
     "rz2": 93.93292236,
@@ -2287,8 +2834,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 88.92787933,
     "rz2": 88.92787933,
@@ -2327,8 +2872,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 90.90393829,
     "rz2": 90.90393829,
@@ -2367,8 +2910,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 84.17332458,
     "rz2": 84.17332458,
@@ -2407,8 +2948,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 109.3397064,
     "rz2": 109.3397064,
@@ -2447,8 +2986,6 @@
     "depth8": 39.8821106,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 3,
     "rz1": 411.7015381,
     "rz2": 210.2553406,
@@ -2487,8 +3024,6 @@
     "depth8": 32.59999847,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 3,
     "rz1": 318.2900085,
     "rz2": 152.9499969,
@@ -2527,8 +3062,6 @@
     "depth8": 15832.41211,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 2,
     "rz1": 378.9645996,
     "rz2": 190.8930511,
@@ -2567,8 +3100,6 @@
     "depth8": 15332.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 375.1142578,
     "rz2": 184.417038,
@@ -2607,8 +3138,6 @@
     "depth8": 14878.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 390.8142395,
     "rz2": 200.9297638,
@@ -2647,8 +3176,6 @@
     "depth8": 14710.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 385.7611084,
     "rz2": 200.9176331,
@@ -2687,8 +3214,6 @@
     "depth8": 15103.69727,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 408.6827393,
     "rz2": 212.8809509,
@@ -2727,8 +3252,6 @@
     "depth8": 14822.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 398.8425598,
     "rz2": 204.0640869,
@@ -2767,8 +3290,6 @@
     "depth8": 14842.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 387.8128052,
     "rz2": 193.7766418,
@@ -2807,8 +3328,6 @@
     "depth8": 14753.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 370.0262146,
     "rz2": 182.85466,
@@ -2847,8 +3366,6 @@
     "depth8": 14698.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 411.3384094,
     "rz2": 212.0293884,
@@ -2887,8 +3404,6 @@
     "depth8": 14536.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 383.815033,
     "rz2": 193.6424713,
@@ -2927,8 +3442,6 @@
     "depth8": 14321.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 408.1846313,
     "rz2": 213.6047058,
@@ -2967,8 +3480,6 @@
     "depth8": 14714.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 385.65448,
     "rz2": 195.2700958,
@@ -3007,8 +3518,6 @@
     "depth8": 14528.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 390.7414551,
     "rz2": 201.6046906,
@@ -3047,8 +3556,6 @@
     "depth8": 14501.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 395.9412537,
     "rz2": 204.9976501,
@@ -3087,8 +3594,6 @@
     "depth8": 14149.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 379.3364258,
     "rz2": 194.7303009,
@@ -3127,8 +3632,6 @@
     "depth8": 14056.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 368.5089722,
     "rz2": 187.2254028,
@@ -3167,8 +3670,6 @@
     "depth8": 14054.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 364.4873047,
     "rz2": 185.9146729,
@@ -3207,8 +3708,6 @@
     "depth8": 13940.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 340.2696838,
     "rz2": 169.9713745,
@@ -3247,8 +3746,6 @@
     "depth8": 13634.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 319.8525085,
     "rz2": 156.0422363,
@@ -3287,8 +3784,6 @@
     "depth8": 13508.0,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 303.8265686,
     "rz2": 145.2694855,
@@ -3327,8 +3822,6 @@
     "depth8": 13405.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 318.219635,
     "rz2": 164.8802948,
@@ -3367,8 +3860,6 @@
     "depth8": 13169.33301,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 306.410614,
     "rz2": 156.5099487,
@@ -3407,8 +3898,6 @@
     "depth8": 13270.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 290.0482788,
     "rz2": 143.8023529,
@@ -3447,8 +3936,6 @@
     "depth8": 12646.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 283.4302673,
     "rz2": 138.3793793,
@@ -3487,8 +3974,6 @@
     "depth8": 13194.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 278.5966797,
     "rz2": 140.2802582,
@@ -3527,8 +4012,6 @@
     "depth8": 14634.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 290.0145874,
     "rz2": 149.882782,
@@ -3567,8 +4050,6 @@
     "depth8": 14634.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 290.0145874,
     "rz2": 149.882782,
@@ -3607,8 +4088,6 @@
     "depth8": 12034.66699,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 271.5262756,
     "rz2": 134.2251587,
@@ -3647,8 +4126,6 @@
     "depth8": 11997.49023,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 1,
     "rz1": 308.3241577,
     "rz2": 171.9241486,
@@ -3687,8 +4164,6 @@
     "depth8": null,
     "depth9": null,
     "depth10": null,
-    "depth11": null,
-    "depth12": null,
     "serial_number": 3,
     "rz1": 318.2900085,
     "rz2": 0.0,
@@ -3707,6 +4182,44 @@
     "effective_irrigation": null,
     "comment": null,
     "created_date": "2019-08-08T23:09:29Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "skeleton.reading",
+  "pk": 66,
+  "fields": {
+    "site": 1,
+    "type": 1,
+    "date": "2019-11-18",
+    "depth1": 234.0,
+    "depth2": 243.0,
+    "depth3": 234.0,
+    "depth4": 1234.0,
+    "depth5": 1234.0,
+    "depth6": 234.0,
+    "depth7": null,
+    "depth8": null,
+    "depth9": null,
+    "depth10": null,
+    "serial_number": 1,
+    "rz1": null,
+    "rz2": null,
+    "rz3": null,
+    "deficit": null,
+    "probe_dwu": null,
+    "estimated_dwu": null,
+    "rain": 2345.0,
+    "meter": 2314.0,
+    "irrigation_litres": null,
+    "irrigation_mms": null,
+    "effective_rain_1": null,
+    "effective_rainfall": null,
+    "efflrr1": null,
+    "efflrr2": null,
+    "effective_irrigation": null,
+    "comment": "",
+    "created_date": "2019-11-18T04:03:47Z",
     "created_by": 1
   }
 },
@@ -4053,6 +4566,461 @@
     "object_repr": "lynskeym",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\", \"groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2019-11-18T03:58:20.229Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "2018",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2019-11-18T03:58:29.755Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "2019",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2019-11-18T03:58:38.566Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "2018",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"current_flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2019-11-18T03:58:45.759Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "2018",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"current_flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2019-11-18T03:58:52.387Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "2019",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"current_flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2019-11-18T03:59:41.695Z",
+    "user": 1,
+    "content_type": 27,
+    "object_id": "1",
+    "object_repr": "Start",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2019-11-18T03:59:47.375Z",
+    "user": 1,
+    "content_type": 27,
+    "object_id": "2",
+    "object_repr": "End",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2019-11-18T03:59:55.443Z",
+    "user": 1,
+    "content_type": 27,
+    "object_id": "3",
+    "object_repr": "Bud Break",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2019-11-18T04:01:20.265Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Pinot Noir Springstone:2018-10-15",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2019-11-18T04:01:41.871Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "2",
+    "object_repr": "Sandpit Pink Lady 22 Notchwood side (no weed mat):2018-10-15",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2019-11-18T04:01:55.173Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "3",
+    "object_repr": "Smiley Pink Kiss:2018-10-15",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2019-11-18T04:02:16.665Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "4",
+    "object_repr": "Pinot Noir Springstone:2019-05-25",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2019-11-18T04:02:29.329Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "5",
+    "object_repr": "Sandpit Pink Lady 22 Notchwood side (no weed mat):2019-05-25",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2019-11-18T04:02:45.690Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "6",
+    "object_repr": "Smiley Pink Kiss:2019-05-25",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2019-11-18T04:03:14.130Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "7",
+    "object_repr": "Pinot Noir Springstone:2019-07-18",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2019-11-18T04:03:34.550Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "8",
+    "object_repr": "Pinot Noir Springstone:2020-08-18",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2019-11-18T04:04:10.419Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "66",
+    "object_repr": "Pinot Noir Springstone:2019-11-18",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2019-11-18T04:05:27.827Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Pinot Noir Springstone:2018-11-28",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2019-11-18T22:07:47.696Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "68",
+    "object_repr": "Smiley Pink Kiss:2019-08-23",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2019-11-18T22:17:27.051Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2019-11-18T22:18:58.567Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "hamiltonb",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2019-11-18T22:19:17.925Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "hamiltonb",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"is_staff\", \"is_superuser\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2019-11-18T22:19:30.557Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "hamiltonb",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2019-11-18T22:23:33.196Z",
+    "user": 5,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "12 Tory St, Longlands, Hawkes Bay 4172, New Zealand",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2019-11-18T22:23:39.590Z",
+    "user": 5,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Evendon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2019-11-18T22:27:06.844Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "River 4 Pacific Rose",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2019-11-18T22:29:15.352Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "5",
+    "object_repr": "Deer Block 3 Pacific Queen",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2019-11-18T22:31:35.824Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "River 4 Pacific Rose",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"upper_limit\", \"lower_limit\", \"emitter_rate\", \"row_spacing\", \"emitter_spacing\", \"plant_spacing\", \"wetted_width\", \"delivery_time\", \"area\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2019-11-18T22:34:55.264Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "River 4 Pacific Rose",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"delivery_time\", \"area\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2019-11-18T22:37:27.640Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "5",
+    "object_repr": "Deer Block 3 Pacific Queen",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"upper_limit\", \"lower_limit\", \"emitter_rate\", \"row_spacing\", \"emitter_spacing\", \"plant_spacing\", \"wetted_width\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2019-11-18T22:39:20.532Z",
+    "user": 5,
+    "content_type": 28,
+    "object_id": "9",
+    "object_repr": "Deer Block 3 Pacific Queen:2018-10-14",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2019-11-18T22:39:42.637Z",
+    "user": 5,
+    "content_type": 28,
+    "object_id": "10",
+    "object_repr": "Deer Block 3 Pacific Queen:2019-04-29",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2019-11-18T22:40:41.617Z",
+    "user": 5,
+    "content_type": 28,
+    "object_id": "11",
+    "object_repr": "River 4 Pacific Rose:2010-10-20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2019-11-18T22:41:00.954Z",
+    "user": 5,
+    "content_type": 28,
+    "object_id": "12",
+    "object_repr": "River 4 Pacific Rose:2019-04-23",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2019-11-18T22:41:59.590Z",
+    "user": 5,
+    "content_type": 28,
+    "object_id": "11",
+    "object_repr": "River 4 Pacific Rose:2018-10-20",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"date\"]}}]"
   }
 }
 ]

@@ -1,14 +1,14 @@
 from django.http import HttpResponse
 from django.template import loader
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, View, CreateView
+from django.utils import timezone
 
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.contrib import messages
 
-from .models import Probe, Reading, Site
+from .models import Probe, Reading, Site, SeasonStartEnd
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -19,7 +19,7 @@ import requests
 import logging
 logger = logging.getLogger(__name__)
 
-from .forms import DocumentForm
+from .forms import DocumentForm, SiteReadingsForm
 
 from datetime import datetime
 
@@ -28,18 +28,65 @@ from .utils import process_probe_data
 class IndexView(TemplateView):
     template_name = 'index.html'
 
-class SiteListView(LoginRequiredMixin, ListView):
-    model = Site
-    template_name = 'sites.html'
-    context_object_name = 'sites'
-
-class SiteReadingsView(LoginRequiredMixin, ListView):
+#TODO why CreateView and not Template View
+class SiteReadingsView(LoginRequiredMixin, CreateView):
     model = Reading
+    form_class = SiteReadingsForm
     template_name = 'site_readings.html'
-    context_object_name = 'readings'
 
-    def get_queryset(self, *args, **kwargs):
-        return Reading.objects.filter(site__id=self.kwargs['pk'])
+def load_graph(request):
+    site_id = request.GET.get('site')
+    season_id = request.GET.get('season')
+
+    # Get latest date for site and season
+    ## TODO:
+
+    template = loader.get_template('vsw_percentage.html')
+    '''
+    context = {
+        'site_id' : site_id,
+        'year' : year,
+        'month' : month,
+        'day': day
+    }
+    '''
+    if site_id:
+        try:
+            dates = SeasonStartEnd.objects.get(site=site_id, season=season_id)
+        except:
+            raise Exception("No Season Start and End set up for site.")
+
+        r = Reading.objects.filter(site__seasonstartend__site=site_id, site__seasonstartend__season=season_id, date__range=(dates.period_from, dates.period_to)).order_by('-date').first()
+        logger.error("Date:" + str(r.date))
+    context = {
+        'site_id' : site_id,
+        'date' : r.date,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def load_sites(request):
+    technician_id = request.GET.get('technician')
+    sites = Site.objects.filter(technician_id=technician_id).order_by('name')
+    return render(request, 'site_dropdown_list_options.html', {'sites':sites})
+
+def load_site_readings(request):
+    readings = None
+    try:
+        site_id = request.GET.get('site')
+        season_id = request.GET.get('season')
+
+        if site_id:
+            try:
+                dates = SeasonStartEnd.objects.get(site=site_id, season=season_id)
+            except:
+                raise Exception("No Season Start and End set up for site.")
+
+            readings = Reading.objects.filter(site__seasonstartend__site=site_id, site__seasonstartend__season=season_id, date__range=(dates.period_from, dates.period_to)).order_by('date')
+
+    except Exception as e:
+        messages.error(request, " Error is: " + str(e))
+    return render(request, 'site_readings_list.html', {'readings':readings})
 
 @login_required
 def vsw_percentage(request, site_id, year, month, day):
@@ -74,6 +121,8 @@ def model_form_upload(request):
                 except Exception as e:
                     messages.error(request, "Error with file: " + str(f) + " Error is: " + str(e))
             return redirect('model_upload')
+        else:
+            logger.error('***Form not valid:' + str(form))
     else:
         form = DocumentForm()
     return render(request, 'model_form_upload.html', {
@@ -99,8 +148,10 @@ def handle_file(f, request):
         # Call different handlers
         if type == 'neutron':
             handle_neutron_file(file_data, request)
-        else:
+        elif type == 'diviner':
             handle_diviner_file(file_data, request)
+        else:
+            handle_prwin_file(file_data, request)
 '''
     handle_neutron_file
 '''
@@ -246,4 +297,76 @@ def handle_diviner_file(file_data, request):
             logger.error("Not a line to process:"  + line)
 
     logger.error("Final Data:" + str(data))
+    process_probe_data(data, serial_number_id, request)
+
+'''
+    handle_prwin_file
+'''
+
+def handle_prwin_file(file_data, request):
+    logger.error("***Handling PRWIN")
+    lines = file_data.split("\n")
+
+    # Remove first line heading
+    del lines[0]
+
+    data = {}
+    site_number = None
+    serial_number_id = None
+    bolNeedSerialNumber = True
+
+    for line in lines:
+        reading = re.search("^\d.*", line) # Make sure we have a reading line
+        if reading:
+
+            fields = line.split(",")
+
+            # First field of every line is site number
+            site_number = fields[0]
+            logger.error("Site Number:" + site_number)
+            reading_type = fields[1]
+            logger.error("Type:" + reading_type)
+
+            # We only want 'Probe' reading types
+            if reading_type == 'Probe':
+                # Get date part. Comes in as DD/MM/YYYY before we get 'space character' time component
+                date_raw = str(fields[2])
+                datefields = date_raw.split(" ")
+                date = datefields[0]
+                date_object = datetime.strptime(date, '%d/%m/%Y') # American
+                date_formatted = date_object.strftime('%Y-%m-%d')
+                logger.error("Date:" + date_formatted)
+
+                # Get Serial Number. We are just going to get it once and asume all PRWIN readings for the season are from one probe
+                if bolNeedSerialNumber:
+                    serialnumber = fields[13]
+                    logger.error("Serial Number:" + serialnumber)
+                    serialnumber = int(serialnumber)
+                    # Check Serial Number exists and return error message if is not. Then get the serial number unique id
+                    if not Probe.objects.filter(serial_number=serialnumber).exists():
+                        raise Exception("Serial Number:" + serialnumber + " does not exist.")
+                    p = Probe.objects.get(serial_number=serialnumber)
+                    serial_number_id = p.id
+                    bolNeedSerialNumber = False
+
+                # Create Key
+                key = site_number + "," + date_formatted
+                logger.error("Key:" + key)
+
+                reading_array = []
+                data[key] = []
+                for depth in range(3, 13):
+                    reading = float(fields[depth])
+                    #logger.error("Reading:" + reading)
+                    reading_array.append(reading)
+
+                #logger.error("Reading Array:" + str(reading_array))
+
+                # Wierldy enough we make 3 of these arrays to put in data to match nuetron and diviner
+                for lap in range(3):
+                    data[key].append(reading_array)
+
+        # End if we have a reading
+    # End loop through lines
+    #logger.error("Final Data:" + str(data))
     process_probe_data(data, serial_number_id, request)

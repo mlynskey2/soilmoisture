@@ -1,0 +1,93 @@
+{% if readings %}
+    <div class="row">
+        <div class="col-2">
+            <div class="readings-table-header">
+                <div class="readings-column">
+                    <ul>
+                        <li>Type</li>
+                        <li>Date</li>
+                        <li>Depth 1</li>
+                        <li>Depth 2</li>
+                        <li>Depth 3</li>
+                        <li>Depth 4</li>
+                        <li>Depth 5</li>
+                        <li>Depth 6</li>
+                        <li>Depth 7</li>
+                        <li>Depth 8</li>
+                        <li>Depth 9</li>
+                        <li>Depth 10</li>
+                        <li>Depth 11</li>
+                        <li>Depth 12</li>
+                        <li>Rain</li>
+                        <li>Meter</li>
+                        <li>Irrigation (L)</li>
+                        <li>Irrigation (mm)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+                <section class="readings-table">
+                        {% for reading in readings %}
+                        <div class="readings-column">
+                            <ul>
+                                <li>{{ reading.type }}</li>
+                                <li>{{ reading.date }}</li>
+                                <li>{{ reading.depth1 }}</li>
+                                <li>{{ reading.depth2 }}</li>
+                                <li>{{ reading.depth3 }}</li>
+                                <li>{{ reading.depth4 }}</li>
+                                <li>{{ reading.depth5 }}</li>
+                                <li>{{ reading.depth6 }}</li>
+                                <li>{{ reading.depth7 }}</li>
+                                <li>{{ reading.depth8 }}</li>
+                                <li>{{ reading.depth9 }}</li>
+                                <li>{{ reading.depth10 }}</li>
+                                <li>{{ reading.depth11 }}</li>
+                                <li>{{ reading.depth12 }}</li>
+                                <li>{{ reading.rain }}</li>
+                                <li>{{ reading.meter }}</li>
+                                <li>{{ reading.irrigation_litres }}</li>
+                                <li>{{ reading.irrigation_mms }}</li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </section>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+               <div class="col-sm-4">
+                   <b>Season to date totals:</b>
+               </div>
+               <div class="col-sm-4">
+                   Irrigation:
+               </div>
+               <div class="col-sm-4">
+                   Rainfall:
+               </div>
+       </div>
+   </div>
+   <h3>Make Recommendation</h3>
+   <label>Hours:</label>
+   <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Mon">
+        <input type="text" class="form-control" placeholder="Tue">
+        <input type="text" class="form-control" placeholder="Wed">
+        <input type="text" class="form-control" placeholder="Thu">
+        <input type="text" class="form-control" placeholder="Fri">
+        <input type="text" class="form-control" placeholder="Sat">
+        <input type="text" class="form-control" placeholder="Sun">
+    </div>
+    <div class="form-group">
+        <label for="recommendation">Recommendation:</label>
+        <textarea class="form-control" rows="5" id="recommendation"></textarea>
+    </div>
+    <button type="submit" class="btn bg-green">Submit</button>
+    <br>
+{% else %}
+    <p>No readings</p>
+{% endif %}
+
+<iframe id="widget-iframe" width="300px" height="195px"
+ src="https://services.metservice.com/weather-widget/widget?params=blue|medium|portrait|days-3|classic&loc=hastings&type=urban" allowtransparency="true" style="border:none" />
